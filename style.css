@@ -1,0 +1,172 @@
+@font-face {
+  font-family: "Archivo-black";
+  src: url("fonts/ArchivoBlack-Regular.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Archivo-reg";
+  src: url("fonts/Archivo-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Archivo-bold";
+  src: url("fonts/Archivo-Bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Archivo-reg";
+}
+
+body {
+  height: 100vh;
+}
+
+.main-page {
+  height: 100%;
+  display: grid;
+  grid:
+    "header" auto
+    "books-container" 1fr / 1fr;
+}
+
+.header {
+  color: white;
+  grid-area: header;
+  min-height: 120px;
+  background-color: rgb(82, 58, 27);
+  box-shadow: 0 5px 20px rgb(0, 0, 0);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  font-family: "Archivo-black";
+  font-size: 3rem;
+}
+
+.books-container {
+  position: relative;
+  grid-area: books-container;
+  padding: 50px;
+
+  display: grid;
+  grid: auto-flow 350px / repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.book-card {
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.212);
+  padding: 15px;
+  border-radius: 25px;
+  transition: transform 0.2s ease;
+
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.book-card:hover {
+  transform: scale(1.05);
+}
+
+.img-container {
+  flex: 1;
+  overflow: hidden;
+  border-radius: 25px;
+}
+
+.img-container > img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.book-info {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.book-title {
+  font-family: "Archivo-black";
+}
+
+.book-info > p > span:last-child {
+  font-family: "Archivo-bold";
+}
+
+.card-btns {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.card-btns > button {
+  border-radius: 10px;
+}
+
+.card-btns > button:hover {
+  background-color: rgb(233, 233, 233);
+}
+
+.card-btns > .delete-btn {
+  fill: red;
+  background-color: white;
+  border: none;
+}
+
+.card-btns > .delete-btn > svg {
+  width: 2.5rem;
+  height: 2.5rem;
+  vertical-align: middle;
+}
+
+.add-books-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  font-size: 3rem;
+  font-family: "Archivo-black";
+  color: rgb(175, 175, 175);
+  text-align: center;
+}
+
+.add-book-btn {
+  position: fixed;
+  right: 40px;
+  bottom: 40px;
+
+  background-color: white;
+  border-radius: 20px;
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.459);
+}
+
+.add-book-btn:hover {
+  background-color: rgb(82, 58, 27);
+  fill: white;
+}
+
+.add-book-btn > svg {
+  width: 4.5rem;
+  height: 4.5rem;
+  vertical-align: middle;
+}
