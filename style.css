@@ -170,3 +170,7 @@ body {
   height: 4.5rem;
   vertical-align: middle;
 }
+
+.book-form-modal {
+  margin: auto;
+}
