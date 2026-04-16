@@ -42,11 +42,52 @@
           </div>
         </article>
 
-        <button class="add-book-btn">
+        <button
+          class="add-book-btn"
+          command="show-modal"
+          commandfor="book-form-modal"
+        >
           <svg>
             <use href="icons/icons.svg#plus-icon"></use>
           </svg>
         </button>
+
+        <dialog id="book-form-modal" class="book-form-modal">
+          <button command="close" commandfor="book-form-modal">Close</button>
+          <form class="form" action="">
+            <div>
+              <label for="book-title">Title:</label>
+              <input
+                id="book-title"
+                name="book_title"
+                type="text"
+                required
+                placeholder="Title"
+              />
+            </div>
+            <div>
+              <label for="book-author">Author:</label>
+              <input
+                id="book-author"
+                name="book_author"
+                type="text"
+                required
+                placeholder="Author"
+              />
+            </div>
+            <div>
+              <label for="book-pages">Pages:</label>
+              <input
+                id="book-pages"
+                name="book_pages"
+                type="number"
+                required
+                placeholder="Pages"
+              />
+            </div>
+            <button type="submit">Submit</button>
+          </form>
+        </dialog>
       </main>
     </div>
   </body>
