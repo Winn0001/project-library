@@ -176,3 +176,9 @@ body {
   width: 20%;
   height: 40%;
 }
+
+.book-form-modal > .close-btn > svg {
+  height: 1.5rem;
+  width: 1.5rem;
+  vertical-align: middle;
+}
