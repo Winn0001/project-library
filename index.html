@@ -53,9 +53,14 @@
         </button>
 
         <dialog id="book-form-modal" class="book-form-modal">
-          <button command="close" commandfor="book-form-modal">
+          <button
+            class="close-btn"
+            command="close"
+            commandfor="book-form-modal"
+          >
             <svg><use href="icons/icons.svg#close-icon"></use></svg>
           </button>
+
           <form class="form" action="">
             <h1>Book's info</h1>
             <div>
@@ -88,6 +93,7 @@
                 placeholder="Pages"
               />
             </div>
+
             <button type="submit">Add</button>
           </form>
         </dialog>
