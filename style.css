@@ -173,4 +173,6 @@ body {
 
 .book-form-modal {
   margin: auto;
+  width: 20%;
+  height: 40%;
 }
