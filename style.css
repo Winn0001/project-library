@@ -211,6 +211,11 @@ body {
   gap: 10px;
 }
 
+.book-form-modal > .form > div:nth-of-type(4) {
+  flex-direction: row;
+  justify-content: center;
+}
+
 .book-form-modal > .form > div > input {
   padding: 10px;
   border: none;
