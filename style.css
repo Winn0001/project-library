@@ -122,7 +122,7 @@ body {
 }
 
 .card-btns > button:hover {
-  background-color: rgb(233, 233, 233);
+  background-color: rgb(209, 209, 209);
 }
 
 .card-btns > .delete-btn {
@@ -190,4 +190,8 @@ body {
   border-radius: 10px;
   border: none;
   padding: 5px;
+}
+
+.book-form-modal > .close-btn:hover {
+  background-color: rgb(209, 209, 209);
 }
