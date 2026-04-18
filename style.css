@@ -182,3 +182,12 @@ body {
   width: 1.5rem;
   vertical-align: middle;
 }
+
+.book-form-modal > .close-btn {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  border-radius: 10px;
+  border: none;
+  padding: 5px;
+}
