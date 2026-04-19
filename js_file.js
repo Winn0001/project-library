@@ -1,7 +1,7 @@
 const myLibrary = [];
 
-function book(title, author, pages) {
-  this.title;
-  this.author;
-  this.pages;
+function Book(title, author, pages) {
+  this.title = title;
+  this.author = author;
+  this.pages = pages;
 }
