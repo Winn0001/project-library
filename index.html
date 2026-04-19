@@ -15,32 +15,31 @@
       <main class="books-container">
         <p class="add-books-text">Add your books</p>
 
-        <article class="book-card">
-          <div class="img-container">
-            <img
-              src="book-images/mercerdes-benz-f1-racing-k2 (1).jpg"
-              alt="Book photo"
-            />
-          </div>
-          <div class="book-info">
-            <h2 class="book-title">Atomic Habits</h2>
-            <p class="author">
-              <span>Author:</span>
-              <span>James Clear</span>
-            </p>
-            <p class="pages">
-              <span>Pages:</span>
-              <span>320</span>
-            </p>
-            <div class="card-btns">
-              <button class="delete-btn">
-                <svg>
-                  <use href="icons/icons.svg#trash-can-icon"></use>
-                </svg>
-              </button>
+        <template>
+          <article class="book-card">
+            <div class="img-container">
+              <img src="" alt="Book photo" />
             </div>
-          </div>
-        </article>
+            <div class="book-info">
+              <h2 class="book-title"></h2>
+              <p class="author">
+                <span>Author:</span>
+                <span class="author-name"></span>
+              </p>
+              <p class="pages">
+                <span>Pages:</span>
+                <span class="number-of-pages"></span>
+              </p>
+              <div class="card-btns">
+                <button class="delete-btn">
+                  <svg>
+                    <use href="icons/icons.svg#trash-can-icon"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </article>
+        </template>
 
         <button
           class="add-book-btn"
