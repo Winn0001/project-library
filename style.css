@@ -210,7 +210,7 @@ body {
   padding: 5px;
 }
 
-.book-form-modal > .form {
+.book-form-modal > .book-form {
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -219,31 +219,31 @@ body {
   gap: 20px;
 }
 
-.book-form-modal > .form > div {
+.book-form-modal > .book-form > div {
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-.book-form-modal > .form > div:nth-of-type(4) {
+.book-form-modal > .book-form > div:nth-of-type(4) {
   flex-direction: row;
   justify-content: center;
 }
 
-.book-form-modal > .form > div > input {
+.book-form-modal > .book-form > div > input {
   padding: 10px;
   border: none;
   background-color: rgb(224, 224, 224);
   border-radius: 10px;
 }
 
-.form > h1 {
+.book-form > h1 {
   font-family: "Archivo-black";
   margin-bottom: auto;
 }
 
-.book-form-modal > .form > button {
+.book-form-modal > .book-form > button {
   font-family: "Archivo-bold";
   font-size: 1rem;
   margin-top: auto;
@@ -253,7 +253,7 @@ body {
   border: none;
   background-color: rgb(0, 255, 55);
 }
-.book-form-modal > .form > button:hover {
+.book-form-modal > .book-form > button:hover {
   background-color: rgb(0, 218, 47);
 }
 
