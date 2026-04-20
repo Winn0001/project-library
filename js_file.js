@@ -8,13 +8,14 @@ form.addEventListener("submit", (e) => {
   const title = bookInfo.get("book_title");
   const author = bookInfo.get("book_author");
   const pages = bookInfo.get("book_pages");
-  const readStatus = bookInfo.get("read_status") !== null;
+  const status = bookInfo.get("read_status") !== null;
 });
 
 const myLibrary = [];
 
-function Book(title, author, pages) {
+function Book(title, author, pages, status) {
   this.title = title;
   this.author = author;
   this.pages = pages;
+  this.status = status;
 }
