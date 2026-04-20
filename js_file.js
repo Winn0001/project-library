@@ -9,6 +9,8 @@ form.addEventListener("submit", (e) => {
   const author = bookInfo.get("book_author");
   const pages = bookInfo.get("book_pages");
   const status = bookInfo.get("read_status") !== null;
+
+  addBookToLibrary(title, author, pages, status);
 });
 
 const myLibrary = [];
@@ -18,4 +20,9 @@ function Book(title, author, pages, status) {
   this.author = author;
   this.pages = pages;
   this.status = status;
+}
+
+function addBookToLibrary(title, author, pages, status) {
+  const book = new Book(title, author, pages, status);
+  myLibrary.push(book);
 }
