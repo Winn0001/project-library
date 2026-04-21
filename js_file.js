@@ -16,6 +16,7 @@ form.addEventListener("submit", (e) => {
 const myLibrary = [];
 
 function Book(title, author, pages, status) {
+  this.id = Math.random().toString(36).slice(2);
   this.title = title;
   this.author = author;
   this.pages = pages;
