@@ -11,20 +11,21 @@ form.addEventListener("submit", (e) => {
   const image = bookInfo.get("image");
   const status = bookInfo.get("read_status") !== null;
 
-  addBookToLibrary(title, author, pages, status);
+  addBookToLibrary(title, author, pages, image, status);
 });
 
 const myLibrary = [];
 
-function Book(title, author, pages, status) {
+function Book(title, author, pages, image, status) {
   this.id = Math.random().toString(36).slice(2);
   this.title = title;
   this.author = author;
   this.pages = pages;
+  this.image = image;
   this.status = status;
 }
 
-function addBookToLibrary(title, author, pages, status) {
-  const book = new Book(title, author, pages, status);
+function addBookToLibrary(title, author, pages, image, status) {
+  const book = new Book(title, author, pages, image, status);
   myLibrary.push(book);
 }
