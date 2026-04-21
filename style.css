@@ -238,7 +238,7 @@ body {
   border-radius: 10px;
 }
 
-.book-form > h1 {
+.book-form-title {
   font-family: "Archivo-black";
   margin-bottom: auto;
 }
