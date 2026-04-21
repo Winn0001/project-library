@@ -140,13 +140,13 @@ body {
   background-color: rgb(209, 209, 209);
 }
 
-.card-btns > .delete-btn {
+.delete-btn {
   fill: red;
   background-color: white;
   border: none;
 }
 
-.card-btns > .delete-btn > svg {
+.delete-btn > svg {
   width: 2.5rem;
   height: 2.5rem;
   vertical-align: middle;
@@ -195,13 +195,13 @@ body {
   padding: 50px;
 }
 
-.book-form-modal > .close-btn > svg {
+.close-btn > svg {
   height: 1.5rem;
   width: 1.5rem;
   vertical-align: middle;
 }
 
-.book-form-modal > .close-btn {
+.close-btn {
   position: absolute;
   right: 10px;
   top: 10px;
@@ -210,7 +210,7 @@ body {
   padding: 5px;
 }
 
-.book-form-modal > .book-form {
+.book-form {
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -219,19 +219,19 @@ body {
   gap: 20px;
 }
 
-.book-form-modal > .book-form > div {
+.form-group {
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-.book-form-modal > .book-form > div:nth-of-type(4) {
+.form-group-inline {
   flex-direction: row;
   justify-content: center;
 }
 
-.book-form-modal > .book-form > div > input {
+.form-group > input {
   padding: 10px;
   border: none;
   background-color: rgb(224, 224, 224);
@@ -243,7 +243,7 @@ body {
   margin-bottom: auto;
 }
 
-.book-form-modal > .book-form > button {
+.submit-btn {
   font-family: "Archivo-bold";
   font-size: 1rem;
   margin-top: auto;
@@ -253,10 +253,10 @@ body {
   border: none;
   background-color: rgb(0, 255, 55);
 }
-.book-form-modal > .book-form > button:hover {
+.submit-btn:hover {
   background-color: rgb(0, 218, 47);
 }
 
-.book-form-modal > .close-btn:hover {
+.close-btn:hover {
   background-color: rgb(209, 209, 209);
 }
