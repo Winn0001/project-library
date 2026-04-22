@@ -12,6 +12,7 @@ form.addEventListener("submit", (e) => {
   const status = bookInfo.get("read_status") !== null;
 
   addBookToLibrary(title, author, pages, image, status);
+  displayBook(myLibrary[myLibrary.length - 1]);
 });
 
 const myLibrary = [];
@@ -28,4 +29,23 @@ function Book(title, author, pages, image, status) {
 function addBookToLibrary(title, author, pages, image, status) {
   const book = new Book(title, author, pages, image, status);
   myLibrary.push(book);
+}
+
+function displayBook(book) {
+  const bookCard = document.getElementById("book-card-template").content;
+  const booksContainer = document.getElementById("books-container");
+  const bookCardClone = document.importNode(bookCard, true);
+
+  bookCardClone.querySelector(".img-container > img").src = URL.createObjectURL(
+    book.image,
+  );
+  bookCardClone.querySelector(".book-title").textContent = book.title;
+  bookCardClone.querySelector(".author-name").textContent = book.author;
+  bookCardClone.querySelector(".number-of-pages").textContent = book.pages;
+
+  bookCardClone.querySelector(".read-toggle-btn").textContent = book.status
+    ? "Read"
+    : "Unread";
+
+  booksContainer.appendChild(bookCardClone);
 }
