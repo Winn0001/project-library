@@ -130,14 +130,28 @@ body {
 .card-btns {
   display: flex;
   justify-content: flex-end;
+  gap: 10px;
 }
 
 .card-btns > button {
   border-radius: 10px;
 }
 
-.card-btns > button:hover {
+.card-btns > button:hover:not(.read-toggle-btn) {
   background-color: rgb(209, 209, 209);
+}
+
+.read-toggle-btn {
+  width: 100%;
+  border: none;
+}
+
+.read-toggle-btn.read {
+  background-color: rgb(50, 187, 37);
+}
+
+.read-toggle-btn.to-read {
+  background-color: rgb(187, 37, 37);
 }
 
 .delete-btn {
