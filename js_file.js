@@ -1,4 +1,5 @@
 const form = document.querySelector(".book-form");
+const bookFormModal = document.getElementById("book-form-modal");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -13,6 +14,7 @@ form.addEventListener("submit", (e) => {
 
   addBookToLibrary(title, author, pages, image, status);
   displayBook(myLibrary[myLibrary.length - 1]);
+  bookFormModal.close();
 });
 
 const myLibrary = [];
