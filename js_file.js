@@ -51,3 +51,8 @@ function displayBook(book) {
 
   booksContainer.appendChild(bookCardClone);
 }
+
+function deleteBook(id) {
+  const bookIndex = myLibrary.findIndex((book) => book.id === id);
+  myLibrary.splice(bookIndex, 1);
+}
