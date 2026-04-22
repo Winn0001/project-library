@@ -1,5 +1,6 @@
 const form = document.querySelector(".book-form");
 const bookFormModal = document.getElementById("book-form-modal");
+const booksContainer = document.getElementById("books-container");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -15,6 +16,17 @@ form.addEventListener("submit", (e) => {
   addBookToLibrary(title, author, pages, image, status);
   displayBook(myLibrary[myLibrary.length - 1]);
   bookFormModal.close();
+});
+
+booksContainer.addEventListener("click", (e) => {
+  const deleteBtn = e.target.closest(".delete-btn");
+
+  if (deleteBtn) {
+    const bookCard = deleteBtn.closest(".book-card");
+    const id = bookCard.dataset.id;
+    deleteBook(id);
+    bookCard.remove();
+  }
 });
 
 const myLibrary = [];
@@ -35,7 +47,6 @@ function addBookToLibrary(title, author, pages, image, status) {
 
 function displayBook(book) {
   const bookCard = document.getElementById("book-card-template").content;
-  const booksContainer = document.getElementById("books-container");
   const bookCardClone = document.importNode(bookCard, true);
 
   bookCardClone.querySelector(".img-container > img").src = URL.createObjectURL(
