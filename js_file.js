@@ -47,7 +47,7 @@ function displayBook(book) {
   bookCardClone.querySelector(".read-toggle-btn").textContent = book.status
     ? "Read"
     : "Unread";
-  bookCardClone.querySelector("delete-btn").dataset.id = book.id;
+  bookCardClone.querySelector(".delete-btn").dataset.id = book.id;
 
   booksContainer.appendChild(bookCardClone);
 }
