@@ -11,7 +11,7 @@ form.addEventListener("submit", (e) => {
   const author = bookInfo.get("book_author");
   const pages = bookInfo.get("book_pages");
   const image = bookInfo.get("image");
-  const status = bookInfo.get("read_status") !== null;
+  const status = bookInfo.get("book_status") !== null;
 
   addBookToLibrary(title, author, pages, image, status);
   displayBook(myLibrary[myLibrary.length - 1]);
