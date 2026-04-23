@@ -41,13 +41,15 @@ function Book(title, author, pages, image, status) {
 }
 
 Book.prototype.toggleBookStatus = function () {
-  if (this.status === "unread") {
-    this.status = "reading";
-  } else if (this.status === "reading") {
-    this.status = "read";
-  } else {
-    this.status = "unread";
-  }
+  const stateTransition = {
+    unread: "reading",
+    reading: "read",
+    read: "unread",
+  };
+
+  this.status = stateTransition[this.status];
+
+  return this.status;
 };
 
 function addBookToLibrary(title, author, pages, image, status) {
