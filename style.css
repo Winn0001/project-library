@@ -150,7 +150,11 @@ body {
   background-color: rgb(50, 187, 37);
 }
 
-.status-toggle-btn.to-read {
+.status-toggle-btn.reading {
+  background-color: rgb(187, 164, 37);
+}
+
+.status-toggle-btn.unread {
   background-color: rgb(187, 37, 37);
 }
 
