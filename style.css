@@ -137,20 +137,20 @@ body {
   border-radius: 10px;
 }
 
-.card-btns > button:hover:not(.read-toggle-btn) {
+.card-btns > button:hover:not(.status-toggle-btn) {
   background-color: rgb(209, 209, 209);
 }
 
-.read-toggle-btn {
+.status-toggle-btn {
   width: 100%;
   border: none;
 }
 
-.read-toggle-btn.read {
+.status-toggle-btn.read {
   background-color: rgb(50, 187, 37);
 }
 
-.read-toggle-btn.to-read {
+.status-toggle-btn.to-read {
   background-color: rgb(187, 37, 37);
 }
 
