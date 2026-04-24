@@ -145,6 +145,8 @@ body {
 .status-toggle-btn {
   width: 100%;
   border: none;
+  color: white;
+  transition: transform 0.1s;
 }
 
 .status-toggle-btn.read {
@@ -157,6 +159,10 @@ body {
 
 .status-toggle-btn.unread {
   background-color: rgb(187, 37, 37);
+}
+
+.status-toggle-btn:active {
+  transform: scale(0.9);
 }
 
 .delete-btn {
