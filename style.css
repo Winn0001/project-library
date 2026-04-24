@@ -284,6 +284,7 @@ body {
 }
 
 .submit-btn {
+  color: white;
   font-family: "Archivo-bold";
   font-size: 1rem;
   margin-top: auto;
@@ -291,13 +292,13 @@ body {
   padding: 10px;
   border-radius: 10px;
   border: none;
-  background-color: rgb(0, 255, 55);
+  background-color: rgb(50, 187, 37);
   transition:
     background-color 0.1s ease,
     transform 0.1s ease;
 }
 .submit-btn:hover {
-  background-color: rgb(0, 218, 47);
+  background-color: rgb(42, 158, 31);
 }
 .submit-btn:active {
   transform: scale(0.9);
