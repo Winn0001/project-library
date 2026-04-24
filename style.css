@@ -146,7 +146,9 @@ body {
   width: 100%;
   border: none;
   color: white;
-  transition: transform 0.1s;
+  transition:
+    transform 0.1s,
+    box-shadow 0.1s;
 }
 
 .status-toggle-btn.read {
@@ -159,6 +161,11 @@ body {
 
 .status-toggle-btn.unread {
   background-color: rgb(187, 37, 37);
+}
+
+.status-toggle-btn:hover {
+  box-shadow: 3px 3px 0 rgb(46, 46, 46);
+  transform: translate(-5px, -5px);
 }
 
 .status-toggle-btn:active {
