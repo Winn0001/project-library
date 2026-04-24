@@ -19,20 +19,21 @@ form.addEventListener("submit", (e) => {
 });
 
 booksContainer.addEventListener("click", (e) => {
-  const deleteBtn = e.target.closest(".delete-btn");
-  const toggleBtn = e.target.closest(".status-toggle-btn");
+  const bookCard = e.target.closest(".book-card");
 
-  if (deleteBtn) {
-    const bookCard = deleteBtn.closest(".book-card");
+  if (bookCard) {
+    const deleteBtn = e.target.closest(".delete-btn");
+    const toggleBtn = e.target.closest(".status-toggle-btn");
     const id = bookCard.dataset.id;
-    deleteBook(id);
-    bookCard.remove();
-  }
 
-  if (toggleBtn) {
-    const bookCard = toggleBtn.closest(".book-card");
-    const id = bookCard.dataset.id;
-    handleBookStatus(id, toggleBtn);
+    if (deleteBtn) {
+      deleteBook(id);
+      bookCard.remove();
+    }
+
+    if (toggleBtn) {
+      handleBookStatus(id, toggleBtn);
+    }
   }
 });
 
