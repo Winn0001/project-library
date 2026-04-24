@@ -20,12 +20,19 @@ form.addEventListener("submit", (e) => {
 
 booksContainer.addEventListener("click", (e) => {
   const deleteBtn = e.target.closest(".delete-btn");
+  const toggleBtn = e.target.closest(".status-toggle-btn");
 
   if (deleteBtn) {
     const bookCard = deleteBtn.closest(".book-card");
     const id = bookCard.dataset.id;
     deleteBook(id);
     bookCard.remove();
+  }
+
+  if (toggleBtn) {
+    const bookCard = toggleBtn.closest(".book-card");
+    const id = bookCard.dataset.id;
+    handleBookStatus(id, toggleBtn);
   }
 });
 
@@ -78,4 +85,17 @@ function displayBook(book) {
 function deleteBook(id) {
   const bookIndex = myLibrary.findIndex((book) => book.id === id);
   myLibrary.splice(bookIndex, 1);
+}
+
+function handleBookStatus(id, toggleBtn) {
+  toggleBtn.classList.remove("unread", "reading", "read");
+
+  myLibrary.forEach((book) => {
+    if (book.id === id) {
+      book.toggleBookStatus();
+      toggleBtn.classList.add(book.status);
+      toggleBtn.textContent =
+        book.status.charAt(0).toUpperCase() + book.status.slice(1);
+    }
+  });
 }
