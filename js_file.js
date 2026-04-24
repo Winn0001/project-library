@@ -15,6 +15,7 @@ form.addEventListener("submit", (e) => {
 
   addBookToLibrary(title, author, pages, image, status);
   displayBook(myLibrary[myLibrary.length - 1]);
+  hideAddBooksText();
   bookFormModal.close();
 });
 
@@ -29,6 +30,7 @@ booksContainer.addEventListener("click", (e) => {
     if (deleteBtn) {
       deleteBook(id);
       bookCard.remove();
+      hideAddBooksText();
     }
 
     if (toggleBtn) {
@@ -99,4 +101,16 @@ function handleBookStatus(id, toggleBtn) {
         book.status.charAt(0).toUpperCase() + book.status.slice(1);
     }
   });
+}
+
+function hideAddBooksText() {
+  const booksContainer = document.getElementById("books-container");
+  const bookCard = document.querySelector(".book-card");
+  const addBooksText = document.querySelector(".add-books-text");
+
+  if (bookCard) {
+    addBooksText.style.display = "none";
+  } else {
+    addBooksText.style.display = "block";
+  }
 }
