@@ -68,6 +68,7 @@ function displayBook(book) {
   bookCardClone.querySelector(".author-name").textContent = book.author;
   bookCardClone.querySelector(".number-of-pages").textContent = book.pages;
   bookCardClone.querySelector(".status-toggle-btn").textContent = book.status;
+  bookCardClone.querySelector(".status-toggle-btn").classList.add(book.status);
   bookCardClone.querySelector(".book-card").dataset.id = book.id;
 
   booksContainer.appendChild(bookCardClone);
